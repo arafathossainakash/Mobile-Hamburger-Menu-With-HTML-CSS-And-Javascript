@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.hamburger{
+        display: none;
+        padding:5px;
+        cursor:pointer;
+        float: right;
+}
+.bar1, .bar2, .bar3{
+        display:block;
+        width:35px;
+        height:3px;
+        margin:5px auto;
+        background-color:#ffffff;
+        transition: 0.4s;
+}
+
+@media only screen and (max-width: 580px) {
+    .hamburger{
+        display: block;
+    }
+    body {
+      background-color: lightblue;
+    }
+    nav{
+        background-color: #2980b9;
+        position: relative;
+        height: 40px;
+    }
+    .nav-link {
+        position: absolute;
+        width: 100%;
+        display: grid;
+        gap: 1.5rem;
+        justify-content: center;
+        background-color: #2c3e50;
+        padding: 1rem 0;
+        left: -100%;
+        transition: 0.4s;
+        top: 40px;
+    }
+    .activeNav{
+        left: 0;
+        top: 40px;
+    }
+    .nav-link a{
+       text-decoration: none;
+       color: #ffffff;
+       font-size: 1.1rem;
+       font-family: fira code;
+       position: relative;
+    }
+    .nav-link a::after{
+        display: grid;
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 0;
+        background: #FF3344;
+        transition: 0.4s all;
+    }
+    .nav-link a:hover::after{
+        width: 100%;
+    }
+
+
+        .change .bar1 {
+        transform: rotate(45deg) translate(8px,3px);
+       }
+       .change .bar2 {
+        opacity: 0;
+       }
+       .change .bar3 {
+        transform: rotate(-45deg) translate(8px,-3px);
+       }
+  }
+
+
+
+    /* Properties for Hamburger
+    .ham{
+        display:none;
+        padding:5px;
+        cursor:pointer;
+       }
+       .bar1,.bar2,.bar3{
+        display:block;
+        width:35px;
+        height:3px;
+        margin:5px auto;
+        background-color:#101010;
+        transition: 0.4s;
+       }
+       @media only screen and (max-width:768px){
+       *{
+         overflow:hidden;
+        }
+
+       .ham{
+         display:block;
+        }
+       .change .bar1 {
+        transform: rotate(45deg) translate(8px,3px);
+       }
+       .change .bar2 {
+        opacity: 0;
+       }
+       .change .bar3 {
+        transform: rotate(-45deg) translate(8px,-3px);
+       }
+       } */
